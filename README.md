@@ -25,7 +25,6 @@ Task: Implement a program that converts a grayscale image from float-based repre
    ```cmd
    build.bat
    ```
----
 
 ## Recorded Execution Times
 
