@@ -25,6 +25,7 @@ Task: Implement a program that converts a grayscale image from float-based repre
    ```cmd
    build.bat
    ```
+---
 
 ## Recorded Execution Times
 
@@ -35,8 +36,6 @@ Recorded average execution time results in **30 runs** in milliseconds:
 | 10    | 10     |       0.00021667        |
 | 100   | 100    |       0.01272000        |
 | 1000  | 1000   |       2.00220667        |
-
----
 
 ## Execution Time Analysis
 
