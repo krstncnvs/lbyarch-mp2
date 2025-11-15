@@ -2,7 +2,7 @@
 
 ## Task
 
-Implement a program that converts a grayscale image from **float-based** representation to **integer-based** representation using C and x86-64 assembly language.
+Implement a program that converts a grayscale image from float-based representation to integer-based representation using C and x86-64 assembly language.
 ---
 
 ## Input
@@ -49,3 +49,7 @@ Recorded average execution time results in **30 runs** in milliseconds:
 ## Sample Screenshots of Program Output
 
 *To be added
+
+---
+## Author
+* Kristine Magdalene J. Cayanan
