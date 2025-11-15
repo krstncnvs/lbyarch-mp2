@@ -45,7 +45,7 @@ Recorded average execution time results in **30 runs** in milliseconds:
 
 ---
 
-## Sample Screenshot of Program Output
+## Screenshot of Sample Program Output
 
 ![Sample Output](assets/sample-output-screenshot.png)
 
