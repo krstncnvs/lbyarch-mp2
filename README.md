@@ -31,11 +31,11 @@ Task: Implement a program that converts a grayscale image from float-based repre
 
 Recorded average execution time results in **30 runs** in milliseconds:
 
-| Width | Height | Execution Time (ms) |
-| ----- | ------ | ------------------- |
-| 10    | 10     |                     |
-| 100   | 100    |                     |
-| 1000  | 1000   |                     |
+| Width | Height | Avg Execution Time (ms) |
+| ----- | ------ | ----------------------- |
+| 10    | 10     |       0.00021667        |
+| 100   | 100    |       0.01272000        |
+| 1000  | 1000   |       2.00220667        |
 
 ---
 
@@ -45,9 +45,9 @@ Recorded average execution time results in **30 runs** in milliseconds:
 
 ---
 
-## Sample Screenshots of Program Output
+## Sample Screenshot of Program Output
 
-*To be added
+![Sample Output](assets/sample-output-screenshot.png)
 
 ---
 ## Author
