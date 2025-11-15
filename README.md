@@ -48,6 +48,7 @@ Based on the measured execution run times using **QueryPerformanceCounter** on W
 * A 1000×1000 image (1,000,000 pixels) completes in around 2 ms, which is still very fast considering the number of operations.
 
 This shows that the assembly function scales efficiently and predictably with image size.
+
 ---
 
 ## Screenshot of Sample Program Output
