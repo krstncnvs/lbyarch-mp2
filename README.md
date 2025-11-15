@@ -27,7 +27,7 @@ Task: Implement a program that converts a grayscale image from float-based repre
    ```
 ---
 
-## Execution Time
+## Recorded Execution Times
 
 Recorded average execution time results in **30 runs** in milliseconds:
 
@@ -39,10 +39,15 @@ Recorded average execution time results in **30 runs** in milliseconds:
 
 ---
 
-## Analysis
+## Execution Time Analysis
 
-* To be added
+Based on the measured execution run times using **QueryPerformanceCounter** on Windows over 30 runs, there is a clear linear relationship between the number of pixels in the image and the time it takes to perform the float-to-integer conversion. As the image size increases, the execution time increases proportionally:
 
+* A 10×10 image (100 pixels) completes in approximately 0.0002 ms.
+* A 100×100 image (10,000 pixels) completes in about 0.0127 ms.
+* A 1000×1000 image (1,000,000 pixels) completes in around 2 ms, which is still very fast considering the number of operations.
+
+This shows that the assembly function scales efficiently and predictably with image size.
 ---
 
 ## Screenshot of Sample Program Output
