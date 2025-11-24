@@ -29,13 +29,25 @@ Task: Implement a program that converts a grayscale image from float-based repre
 
 ## Recorded Execution Times
 
-Recorded average execution time results in **30 runs** in milliseconds:
+Recorded average execution time results in **30 runs** in milliseconds in Assembly:
 
 | Width | Height | Avg Execution Time (ms) |
 | ----- | ------ | ----------------------- |
-| 10    | 10     |       0.00021667        |
-| 100   | 100    |       0.01272000        |
-| 1000  | 1000   |       2.00220667        |
+| 10    | 10     |       0.00015000        |
+| 100   | 100    |       0.01082333        |
+| 1000  | 1000   |       1.55232000        |
+
+
+Recorded average execution time results in **30 runs** in milliseconds in C:
+
+| Width | Height | Avg Execution Time (ms) |
+| ----- | ------ | ----------------------- |
+| 10    | 10     |       0.00047667        |
+| 100   | 100    |       0.03965000        |
+| 1000  | 1000   |       4.10932000        |
+
+Raw execution time data is available in:
+- `data/run_times.xlsx`
 
 ## Execution Time Analysis
 

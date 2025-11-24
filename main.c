@@ -47,7 +47,7 @@ void checkCorrectness(float* floatPixels, unsigned char* intPixels, int total) {
 	printf("\nAverage time over 30 runs in C: %.8f ms\n", total_ms / 30.0);
 	printf("Execution time for each run:\n");
 	for (int r = 0; r < 30; r++) {
-		printf("Run %d: %.6f ms\n", r + 1, run_times[r]);
+		printf("Run %d: %.4f ms\n", r + 1, run_times[r]);
 	}
 }
 
