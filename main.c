@@ -3,28 +3,51 @@
 #include <time.h>
 #include <windows.h>
 
-extern void imgCvtGrayFloatToInt(float *floatPixels, unsigned char *intPixels, int height, int width);
+extern void imgCvtGrayFloatToInt(float* floatPixels, unsigned char* intPixels, int height, int width);
 
 // function for checking correctness of output
 void checkCorrectness(float* floatPixels, unsigned char* intPixels, int total) {
-	int correct = 1; // assume correct
-	unsigned char expected;
-
+	// correctness check
 	for (int i = 0; i < total; i++) {
-		expected = (unsigned char)(floatPixels[i] * 255.0f + 0.5f);
+		unsigned char expected = (unsigned char)(floatPixels[i] * 255.0f + 0.5f);
+
 		if (intPixels[i] != expected) {
-			correct = 0;
 			printf("Mismatch at pixel %d: ASM=%d, Expected=%d\n",
 				i, intPixels[i], expected);
-			break;
+			printf("\nCorrectness check: FAIL\n");
+			return;
 		}
 	}
 
-	if (correct) {
-		printf("\nCorrectness check: PASS\n");
+	printf("\nCorrectness check: PASS\n");
+
+	// performance testing
+	LARGE_INTEGER frequency, start, end;
+	QueryPerformanceFrequency(&frequency);
+
+	double run_times[30];
+	double total_ms = 0;
+
+	for (int run = 0; run < 30; run++) {
+		QueryPerformanceCounter(&start);
+
+		for (int i = 0; i < total; i++) {
+			unsigned char expected =
+				(unsigned char)(floatPixels[i] * 255.0f + 0.5f);
+		}
+
+		QueryPerformanceCounter(&end);
+
+		run_times[run] =
+			(double)(end.QuadPart - start.QuadPart) * 1000.0 / frequency.QuadPart;
+
+		total_ms += run_times[run];
 	}
-	else {
-		printf("\nCorrectness check: FAIL\n");
+
+	printf("\nAverage time over 30 runs in C: %.8f ms\n", total_ms / 30.0);
+	printf("Execution time for each run:\n");
+	for (int r = 0; r < 30; r++) {
+		printf("Run %d: %.6f ms\n", r + 1, run_times[r]);
 	}
 }
 
@@ -99,7 +122,7 @@ int main() {
 	}
 
 	// printing of exec times 
-	printf("\nAverage execution time in 30 runs: %.8f ms\n", total_ms / runs);
+	printf("\nAverage execution time in 30 runs in Assembly: %.8f ms\n", total_ms / runs);
 	printf("Execution time for each run:\n");
 	for (int r = 0; r < runs; r++) {
 		printf("Run %d: %.4f ms\n", r + 1, run_times[r]);
